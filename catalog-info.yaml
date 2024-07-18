@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: dw3ili2wt-dotnet-basic-gitops
+  description: This is GitOps manifest for dw3ili2wt-dotnet-basic   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: dw3ili2wt-dotnet-basic
+    janus-idp.io/tekton: dw3ili2wt-dotnet-basic
+    backstage.io/kubernetes-id: dw3ili2wt-dotnet-basic 
+    backstage.io/techdocs-ref: dir:. 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:dw3ili2wt-dotnet-basic
